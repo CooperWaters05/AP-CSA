@@ -1,21 +1,28 @@
 public class Start {
-    public static void main(String[] args){
-        try {
+public static void main(String[] args) {
+try {
+IntVector test = new IntVector(0);
+for (int i = 0; i < 20; i++) {
+test.add(i*2);
+}
+System.out.println(test);
 
-            IntVector test = new IntVector(-1000);
+test.add(17,100);
+System.out.println(test);
 
-            System.out.println("Size: " + test.size());
-        
-            for (int i = 0; i < test.size(); i++) {
+//System.out.println(test);
 
-            }
+//test.add(50,50);
+System.out.println(test);
 
-        } catch(IllegalArgumentException ex) {
-            System.out.println("That's illegal!");
-        } catch(ArithmeticException ex) {
-            System.out.println("Bad Math");
-        } catch(Exception ex){
-            System.out.println("Generic Exception:");
-        }
-    }
+//test.remove(3);
+//System.out.println(test);
+} catch(IllegalArgumentException ex) {
+System.out.println("That's illegal!");
+} catch(ArithmeticException ex) {
+System.out.println("bad math");
+} catch(Exception ex) {
+System.out.println("Generic exception");
+}
+}
 }

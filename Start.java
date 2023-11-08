@@ -15,5 +15,9 @@ public class Start {
 
         System.out.println(stringArray);
         System.out.println(intArray);
+
+        for(String s : stringArray){
+            System.out.println(s);
+        }
     }
 }

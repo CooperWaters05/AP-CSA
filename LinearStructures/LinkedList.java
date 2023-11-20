@@ -203,30 +203,25 @@ public class LinkedList<E> {
     }
 
     private class LinkedListIterator implements Iterator<E> {
-        private int current = 0;
-
-        public boolean hasNext() {
-            return (current < size);
-        }
-
-        public E next(){
-            return data[current++];
-        }
-
-        public void remove() {
-            LinkedList.this.remove(current);
-        }
-    }
-
-
-
-    private class LinkedListIterator implements Iterator {
         private Node<E> current = head;
+        private int num = 0;
+
+        public boolean hasNext(){
+            return(num < size);
+        }
+        public E next(){
+            if(hasNext()){
+                Node<E> og = current;
+                current = current.next;
+                return og.element;
+            }
+            return null;
+        }
     }
 
-    public boolean hasNext() {
-        return false;
-
+    public void remove(){
+        E element;
+        Node<E> next;
     }
     
 }
